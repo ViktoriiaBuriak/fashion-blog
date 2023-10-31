@@ -299,11 +299,28 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: 1.14em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-pages-links:hover,
+.blog-pages-links:focus {
+  color: #a2a2a2;
+}
+
+.blog-pages-links:hover .blog-pages-icon,
+.blog-pages-links:focus .blog-pages-icon {
+  fill: #a2a2a2;
 }
 
 .first-pages-link {
   color: #a2a2a2;
 }
+
+.first-pages-link .blog-pages-icon {
+  fill: #a2a2a2;
+}
+
 .blog-pages-icon {
   margin: 0 10px;
 }
@@ -468,6 +485,7 @@ img {
   font-family: PT Sans;
   font-size: 12px;
   line-height: normal;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first-paragraf {
@@ -477,6 +495,11 @@ img {
 .social-icon {
   fill: #5a5a5a;
   margin-bottom: 6px;
+}
+
+.social-items:hover .social-icon,
+.social-items:focus .social-icon {
+  fill: #c9a96e;
 }
 
 /* Tags */
@@ -547,8 +570,24 @@ img {
 }
 .footer-nav-logo {
   display: block;
+  position: relative;
   text-align: center;
+  color: #171717;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.01em;
   margin-bottom: 60px;
+}
+
+.footer-nav-logo::after {
+  content: "";
+  position: absolute;
+  background-color: #c9a96e89;
+  height: 4px;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
 }
 .footer-nav-list {
   display: flex;
@@ -558,6 +597,17 @@ img {
 .footer-nav-item {
 }
 .footer-nav-link {
+  color: #666;
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  color: #c9a96e;
 }
 
 /* Footer soc */
@@ -571,6 +621,35 @@ img {
 .footer-soc-items {
 }
 .footer-soc-links {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-icon {
+  fill: #5a5a5a;
+}
+
+.footer-soc-links:hover,
+.footer-soc-links:focus {
+  background-color: #c9a96e;
+  border: none;
+}
+
+.footer-soc-links:hover .footer-soc-icon,
+.footer-soc-links:focus .footer-soc-icon {
+  fill: #ffffff;
+}
+.footer-paragraf {
+  color: #666;
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
 }
